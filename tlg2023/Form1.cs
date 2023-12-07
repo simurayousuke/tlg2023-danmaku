@@ -27,7 +27,7 @@ namespace tlg2023
         private int latest = 0;
         private bool initialized = false;
         private int speed = 3;
-        private int fontSize = 24;
+        private int fontSize = 48;
 
         private Random random = new Random();
 
@@ -128,14 +128,15 @@ namespace tlg2023
 
         private int GetFontSizeBasedOnResolution()
         {
+            return 48;
             var screenWidth = Screen.PrimaryScreen.Bounds.Width;
             var screenHeight = Screen.PrimaryScreen.Bounds.Height;
 
             // 这里是一个简单的例子，根据需要调整规则
             if (screenWidth > 1920 && screenHeight > 1080)
-                return 24; // 大屏幕分辨率
+                return 48; // 大屏幕分辨率
             else if (screenWidth > 1280 && screenHeight > 720)
-                return 16; // 中等屏幕分辨率
+                return 20; // 中等屏幕分辨率
             else
                 return 12; // 小屏幕分辨率
         }
